@@ -29,8 +29,11 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="#" className="flex items-center space-x-2">
               <div className="h-10 w-10 relative">
-                <div className="absolute inset-0 border-4 border-eco-green rounded-full"></div>
-                <div className="absolute inset-2 bg-eco-mint rounded-full"></div>
+                <img 
+                  src="/lovable-uploads/9fae8ce5-d52c-4373-b801-a0d2fe33f58a.png" 
+                  alt="EcoLens Logo" 
+                  className="h-full w-full object-contain" 
+                />
               </div>
               <span className={`text-xl font-bold ${scrolled ? 'text-eco-green-dark' : 'text-eco-green-dark'} font-poppins`}>ECOLENS</span>
             </a>

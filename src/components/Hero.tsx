@@ -10,9 +10,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 relative z-10">
         <div className="flex flex-col items-center justify-center text-center">
           {/* Logo */}
-          <div className="w-24 h-24 relative mb-6 animate-growUp">
-            <div className="absolute inset-0 border-8 border-eco-green rounded-full"></div>
-            <div className="absolute inset-4 bg-eco-mint rounded-full"></div>
+          <div className="w-32 h-32 mb-6 animate-growUp">
+            <img 
+              src="/lovable-uploads/9fae8ce5-d52c-4373-b801-a0d2fe33f58a.png" 
+              alt="EcoLens Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
           
           {/* Title */}
