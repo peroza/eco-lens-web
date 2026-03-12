@@ -1,73 +1,165 @@
-# Welcome to your Lovable project
+# Eco Lens Web
 
-## Project info
+Eco Lens is a web initiative focused on making environmental data, insights, and actions more accessible and engaging. This repository contains the frontend application that powers the Eco Lens website.
 
-**URL**: https://lovable.dev/projects/411bede2-4b6a-4e2a-8210-6e190eb4ba34
+The site is built as a modern, responsive, single-page application using React, Tailwind CSS, and the shadcn/ui component system.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Table of contents
 
-**Use Lovable**
+- **Overview**
+- **Features**
+- **Tech stack**
+- **Getting started**
+- **Available scripts**
+- **Project structure**
+- **Deployment**
+- **Contributing**
+- **License**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/411bede2-4b6a-4e2a-8210-6e190eb4ba34) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Overview
 
-**Use your preferred IDE**
+Eco Lens aims to:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Visualize environmental indicators** in a way that is understandable for non-experts.
+- **Highlight initiatives and projects** that contribute to sustainability and climate action.
+- **Provide an approachable entry point** for people and organizations who want to explore their environmental impact.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The website is designed to be:
 
-Follow these steps:
+- **Fast and responsive** on modern browsers.
+- **Accessible by default**, following semantic HTML and ARIA best practices where possible.
+- **Easy to evolve**, with a component-driven architecture and a clear separation of concerns.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+Depending on your current implementation, the site typically includes:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **Landing page** presenting the Eco Lens mission and value proposition.
+- **Sections for initiatives / projects** with cards, summaries, and calls to action.
+- **Data visualizations** (e.g. charts, dashboards) for environmental metrics.
+- **Responsive layout** optimized for desktop, tablet, and mobile.
+- **Dark/light theme support** via `next-themes` and Tailwind.
 
-**Edit a file directly in GitHub**
+You can adapt and extend this section as new pages and capabilities are added.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Tech stack
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** – dev server and build tool.
+- **React 18** – UI library.
+- **TypeScript** – static typing and safer refactoring.
+- **shadcn/ui + Radix UI** – accessible UI primitives and components.
+- **Tailwind CSS** – utility-first styling.
+- **TanStack Query** – async data fetching and caching (where needed).
 
-## How can I deploy this project?
+The project was initially scaffolded using **Lovable**, and is now maintained in this repository.
 
-Simply open [Lovable](https://lovable.dev/projects/411bede2-4b6a-4e2a-8210-6e190eb4ba34) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## Getting started
 
-Yes, you can!
+### Prerequisites
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Node.js** ≥ 18 (recommended to use `nvm`).
+- **npm** (or `pnpm`/`bun` if you prefer and configure accordingly).
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Installation
+
+Clone the repository and install dependencies:
+
+```sh
+git clone <REPO_URL>
+cd eco-lens-web
+npm install
+```
+
+### Running the app locally
+
+Start the development server:
+
+```sh
+npm run dev
+```
+
+By default Vite serves the app at `http://localhost:5173`. Open this URL in your browser to view the site.
+
+---
+
+## Available scripts
+
+All scripts are defined in `package.json`:
+
+- **`npm run dev`** – Start the Vite development server with hot reloading.
+- **`npm run build`** – Create an optimized production build.
+- **`npm run build:dev`** – Build using the `development` mode (useful for debugging builds).
+- **`npm run preview`** – Preview the production build locally.
+- **`npm run lint`** – Run ESLint over the codebase.
+
+---
+
+## Project structure
+
+A high-level overview of the main folders:
+
+- **`src/`** – Application source code (components, pages, hooks, utilities).
+- **`public/`** – Static assets served as-is.
+- **`index.html`** – Vite entry HTML file.
+- **`tailwind.config.ts`** – Tailwind configuration.
+- **`vite.config.ts`** – Vite configuration.
+
+The exact structure inside `src/` may evolve as the initiative grows (e.g. `components/`, `features/`, `pages/`, `lib/`).
+
+---
+
+## Deployment
+
+This is a static frontend that can be deployed to any modern static hosting provider, such as:
+
+- **Vercel**
+- **Netlify**
+- **Cloudflare Pages**
+- **GitHub Pages**
+- Any other platform that can serve static files.
+
+Typical deployment flow:
+
+```sh
+npm run build
+```
+
+This generates a `dist/` folder with the production assets. Configure your hosting provider to:
+
+- Serve files from the `dist/` directory.
+- Use `index.html` as the entry file.
+- Optionally redirect all routes to `index.html` (for client-side routing).
+
+If you deploy with Vercel or Netlify, you can usually select this repository, choose Vite/React as the framework preset, and keep the default build command (`npm run build`) and output directory (`dist`).
+
+---
+
+## Contributing
+
+Contributions that improve the user experience, accessibility, documentation, or environmental storytelling are welcome.
+
+General guidelines:
+
+- **Open an issue** to describe significant changes or new features before starting.
+- **Keep pull requests focused** on a single change or feature.
+- **Follow TypeScript strictness** and linting rules.
+- **Prefer small, composable components** over large monolithic ones.
+
+---
+
+## License
+
+Specify the license that applies to this project (for example, MIT, Apache-2.0, or a custom license). If you have not chosen one yet, consider adding a `LICENSE` file and updating this section accordingly.
+
