@@ -54,26 +54,32 @@ const supporters: LogoItem[] = [
   {
     name: "EPFL IFNC",
     src: `${BASE_URL}supporters/EPFL IFNC Logo.png`,
+    url: "https://www.epfl.ch/labs/lsir/integrative-food-science-and-nutrition-center-project/",
   },
   {
     name: "Durabilité EPFL",
     src: `${BASE_URL}supporters/epfl-durabilite.png`,
+    url: "https://www.epfl.ch/about/sustainability/fr/durabilite/",
   },
   {
     name: "Pi2Life",
     src: `${BASE_URL}supporters/pi2life.jpeg`,
+    url: "https://pi2.life/home",
   },
   {
     name: "DLAB",
     src: `${BASE_URL}supporters/dlab.png`,
+    url: "https://dlab.epfl.ch/",
   },
   {
     name: "PBU",
     src: `${BASE_URL}supporters/PBU_white.jpg`,
+    url: "https://www.plantbaseduniversities.org/",
   },
   {
     name: "Vegetables Logo",
     src: `${BASE_URL}supporters/vegetables-logo-noir-vert-B_20250509_142536_0000.png`,
+    url: "https://vege-tables.com/en/",
   },
 ];
 
@@ -140,12 +146,28 @@ const Support = () => {
                   key={supporter.name}
                   className="bg-white rounded-lg shadow-md p-4 flex items-center justify-center w-40 h-28 md:w-44 md:h-28 transition-transform hover:scale-105"
                 >
-                  <img
-                    src={supporter.src}
-                    alt={supporter.name}
-                    className="max-h-16 w-full object-contain"
-                    loading="lazy"
-                  />
+                  {supporter.url ? (
+                    <a
+                      href={supporter.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full h-full flex items-center justify-center"
+                    >
+                      <img
+                        src={supporter.src}
+                        alt={supporter.name}
+                        className="max-h-16 w-full object-contain"
+                        loading="lazy"
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={supporter.src}
+                      alt={supporter.name}
+                      className="max-h-16 w-full object-contain"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
               ))}
             </div>
