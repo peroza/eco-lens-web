@@ -59,7 +59,7 @@ const AppScreenshots = () => {
                     <img
                       src={screenshot.src}
                       alt={screenshot.alt}
-                      className="w-full max-w-xl object-cover"
+                      className="w-full max-w-2xl md:max-w-3xl object-contain"
                       loading="lazy"
                     />
                   </div>
@@ -71,7 +71,7 @@ const AppScreenshots = () => {
           </Carousel>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-10 flex flex-wrap justify-center gap-4">
+        <div className="max-w-4xl mx-auto mt-6 flex flex-wrap justify-center gap-3">
           <a
             href="https://apps.apple.com/us/app/ecolens/id6745223300"
             aria-label="Download EcoLens on the Apple App Store"
@@ -81,7 +81,7 @@ const AppScreenshots = () => {
             <img
               src={`${BASE_URL}download-app/apple_store.svg`}
               alt="Download on the App Store"
-              className="h-12 md:h-14 w-auto object-contain"
+              className="h-10 md:h-12 w-auto object-contain"
               loading="lazy"
             />
           </a>
@@ -94,7 +94,7 @@ const AppScreenshots = () => {
             <img
               src={`${BASE_URL}download-app/google_play.png`}
               alt="Get it on Google Play"
-              className="h-12 md:h-14 w-auto object-contain"
+              className="h-10 md:h-12 w-auto object-contain"
               loading="lazy"
             />
           </a>
