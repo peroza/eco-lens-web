@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import Goals from '@/components/Goals';
 import Stakeholders from '@/components/Stakeholders';
 import History from '@/components/History';
-import Posters from '@/components/Posters';
+import AppScreenshots from '@/components/AppScreenshots';
 import Support from '@/components/Support';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
@@ -19,7 +19,7 @@ const Index = () => {
         <Goals />
         <Stakeholders />
         <History />
-        <Posters />
+        <AppScreenshots />
         <Support />
         <Newsletter />
       </main>

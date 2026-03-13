@@ -13,8 +13,11 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 relative">
-                <div className="absolute inset-0 border-3 border-eco-green rounded-full"></div>
-                <div className="absolute inset-1.5 bg-eco-mint rounded-full"></div>
+                <img
+                  src="/lovable-uploads/ecolens-logo-transparent.png"
+                  alt="EcoLens Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-white font-poppins">ECOLENS</span>
             </div>
@@ -22,21 +25,32 @@ const Footer = () => {
               Promoting sustainable food consumption within institutional communities.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a
+                href="https://www.linkedin.com/company/ecolens-challenge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors transform transition-transform duration-200 hover:scale-110"
+              >
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a
+                href="https://github.com/peroza/eco-lens-web"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors transform transition-transform duration-200 hover:scale-110"
+              >
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a
+                href="https://www.instagram.com/ecolens_epfl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-colors transform transition-transform duration-200 hover:scale-110"
+              >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
               </a>
             </div>
           </div>
@@ -55,7 +69,7 @@ const Footer = () => {
                 <a href="#history" className="text-gray-300 hover:text-white transition-colors">History</a>
               </li>
               <li>
-                <a href="#posters" className="text-gray-300 hover:text-white transition-colors">Posters</a>
+                <a href="#app" className="text-gray-300 hover:text-white transition-colors">App</a>
               </li>
               <li>
                 <a href="#support" className="text-gray-300 hover:text-white transition-colors">Support</a>
@@ -69,7 +83,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li>EPFL</li>
               <li>Lausanne, Switzerland</li>
-              <li>info@ecolens.org</li>
+              <li>ecolens.info@gmail.com</li>
             </ul>
           </div>
           

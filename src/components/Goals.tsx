@@ -1,8 +1,11 @@
 
 import React from 'react';
+import { useInView } from '@/hooks/useInView';
 import { Leaf, Award, Users } from "lucide-react";
 
 const Goals = () => {
+  const { ref, inView } = useInView<HTMLDivElement>();
+
   return (
     <section id="goals" className="py-16 bg-white">
       <div className="section-container">
@@ -11,14 +14,19 @@ const Goals = () => {
           Promoting sustainable food consumption within institutional communities
         </p>
         
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+        <div
+          ref={ref}
+          className={`mt-12 bg-white rounded-lg shadow-lg p-6 md:p-8 max-w-4xl mx-auto card-animated transition-opacity transition-transform duration-500 ease-out ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <p className="text-gray-700 mb-6 leading-relaxed">
             EcoLens is an app designed to promote sustainable food consumption within institutional communities.
           </p>
           
           <div className="space-y-8">
-            <div className="flex flex-col md:flex-row items-start gap-4">
-              <div className="bg-eco-mint rounded-full p-3 text-eco-green-dark shrink-0">
+            <div className="flex flex-col md:flex-row items-start gap-4 group">
+              <div className="bg-eco-mint rounded-full p-3 text-eco-green-dark shrink-0 transition-transform duration-200 group-hover:scale-110">
                 <Users size={24} />
               </div>
               <div>
@@ -29,8 +37,8 @@ const Goals = () => {
               </div>
             </div>
             
-            <div className="flex flex-col md:flex-row items-start gap-4">
-              <div className="bg-eco-mint rounded-full p-3 text-eco-green-dark shrink-0">
+            <div className="flex flex-col md:flex-row items-start gap-4 group">
+              <div className="bg-eco-mint rounded-full p-3 text-eco-green-dark shrink-0 transition-transform duration-200 group-hover:scale-110">
                 <Award size={24} />
               </div>
               <div>
@@ -41,8 +49,8 @@ const Goals = () => {
               </div>
             </div>
             
-            <div className="flex flex-col md:flex-row items-start gap-4">
-              <div className="bg-eco-mint rounded-full p-3 text-eco-green-dark shrink-0">
+            <div className="flex flex-col md:flex-row items-start gap-4 group">
+              <div className="bg-eco-mint rounded-full p-3 text-eco-green-dark shrink-0 transition-transform duration-200 group-hover:scale-110">
                 <Leaf size={24} />
               </div>
               <div>

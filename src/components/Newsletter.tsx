@@ -10,7 +10,7 @@ const Newsletter = () => {
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Simple validation
@@ -44,22 +44,42 @@ const Newsletter = () => {
       return;
     }
     
-    // Form submission simulation
+    // Real form submission via Formspree
     setIsSubmitting(true);
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mnjgzjwe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
       setSubmitted(true);
       setEmail('');
       setCaptchaAnswer('');
-      
+
       toast({
         title: "Success!",
         description: "You've been added to our newsletter.",
         variant: "default",
         duration: 5000,
       });
-    }, 1500);
+    } catch (error) {
+      toast({
+        title: "Unable to submit",
+        description: "We could not submit your email. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -114,8 +134,8 @@ const Newsletter = () => {
               </button>
             </form>
           ) : (
-            <div className="text-center py-4">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
+            <div className="text-center py-4 animate-fadeIn">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4 animate-growUp">
                 <Check className="text-green-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Thank You!</h3>

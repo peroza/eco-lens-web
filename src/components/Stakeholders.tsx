@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Building2, Users, Store } from 'lucide-react';
+import { useInView } from '@/hooks/useInView';
 
 const Stakeholders = () => {
+  const { ref, inView } = useInView<HTMLDivElement>();
+
   return (
     <section id="stakeholders" className="py-16 bg-gray-50">
       <div className="section-container">
@@ -11,11 +14,16 @@ const Stakeholders = () => {
           Creating a sustainable ecosystem with benefits for all participants
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div
+          ref={ref}
+          className={`grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 transition-opacity transition-transform duration-500 ease-out ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           {/* Institutions */}
-          <div className="eco-card hover:border-eco-green hover:border-2 group transform hover:-translate-y-2 transition-all duration-300">
+          <div className="eco-card card-animated hover:border-eco-green hover:border-2 group">
             <div className="mb-6 text-center">
-              <div className="inline-flex p-3 rounded-full bg-eco-mint-light text-eco-green-dark mb-4">
+              <div className="inline-flex p-3 rounded-full bg-eco-mint-light text-eco-green-dark mb-4 transition-transform duration-200 group-hover:scale-110">
                 <Building2 size={32} />
               </div>
               <h3 className="text-xl font-bold mb-2 text-eco-green-dark">Institutions</h3>
@@ -26,9 +34,9 @@ const Stakeholders = () => {
           </div>
           
           {/* Players */}
-          <div className="eco-card hover:border-eco-green hover:border-2 group transform hover:-translate-y-2 transition-all duration-300">
+          <div className="eco-card card-animated hover:border-eco-green hover:border-2 group">
             <div className="mb-6 text-center">
-              <div className="inline-flex p-3 rounded-full bg-eco-mint-light text-eco-green-dark mb-4">
+              <div className="inline-flex p-3 rounded-full bg-eco-mint-light text-eco-green-dark mb-4 transition-transform duration-200 group-hover:scale-110">
                 <Users size={32} />
               </div>
               <h3 className="text-xl font-bold mb-2 text-eco-green-dark">Players</h3>
@@ -39,9 +47,9 @@ const Stakeholders = () => {
           </div>
           
           {/* Eco-companies */}
-          <div className="eco-card hover:border-eco-green hover:border-2 group transform hover:-translate-y-2 transition-all duration-300">
+          <div className="eco-card card-animated hover:border-eco-green hover:border-2 group">
             <div className="mb-6 text-center">
-              <div className="inline-flex p-3 rounded-full bg-eco-mint-light text-eco-green-dark mb-4">
+              <div className="inline-flex p-3 rounded-full bg-eco-mint-light text-eco-green-dark mb-4 transition-transform duration-200 group-hover:scale-110">
                 <Store size={32} />
               </div>
               <h3 className="text-xl font-bold mb-2 text-eco-green-dark">Eco-companies</h3>

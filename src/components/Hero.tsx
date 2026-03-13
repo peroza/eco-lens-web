@@ -1,41 +1,54 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const backgroundTranslate = Math.min(scrollY * 0.15, 60);
+
   return (
     <div className="pt-20 relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-eco-mint-light to-eco-green-light opacity-20"></div>
+      <div
+        className="absolute inset-0 eco-gradient opacity-70 transition-transform duration-500 ease-out"
+        style={{ transform: `translateY(${backgroundTranslate}px)` }}
+      ></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 relative z-10">
-        <div className="flex flex-col items-center justify-center text-center">
-          {/* Logo */}
-          <div className="w-32 h-32 mb-6 animate-growUp">
-            <img 
-              src="/lovable-uploads/9fae8ce5-d52c-4373-b801-a0d2fe33f58a.png" 
-              alt="EcoLens Logo" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-          
+        <div className="flex flex-col items-center justify-center text-center animate-fadeIn">
           {/* Title */}
-          <h1 className="text-4xl md:text-6xl font-bold text-eco-green-dark mb-6 font-poppins">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-eco-green-dark mb-6 font-poppins animate-growUp">
             ECOLENS
           </h1>
-          
+
           {/* Subtitle */}
           <div className="max-w-3xl mx-auto">
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-              EcoLens' goal is to educate and incentivise institution's communities towards a more sustainable nutrition.
+              EcoLens helps institutions educate and incentivise their communities towards more sustainable food choices, turning everyday menus into climate-friendly decisions.
             </p>
           </div>
           
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#goals" className="bg-eco-green hover:bg-eco-green-dark text-white font-medium py-3 px-8 rounded-md transition-colors shadow-md hover:shadow-lg">
+            <a href="#goals" className="eco-button shadow-md hover:shadow-lg transform transition-transform duration-200 hover:scale-105">
               Learn More
             </a>
-            <a href="#newsletter" className="bg-white border-2 border-eco-green text-eco-green-dark font-medium py-3 px-8 rounded-md transition-colors shadow-md hover:shadow-lg hover:bg-gray-50">
+            <a
+              href="#newsletter"
+              className="bg-white border-2 border-eco-green text-eco-green-dark font-medium py-3 px-8 rounded-md transition-colors shadow-md hover:shadow-lg hover:bg-gray-50 transform transition-transform duration-200 hover:scale-105"
+            >
               Stay Updated
             </a>
           </div>

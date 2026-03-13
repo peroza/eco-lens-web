@@ -30,7 +30,7 @@ const Navbar = () => {
             <a href="#" className="flex items-center space-x-2">
               <div className="h-10 w-10 relative">
                 <img 
-                  src="/lovable-uploads/9fae8ce5-d52c-4373-b801-a0d2fe33f58a.png" 
+                  src="/lovable-uploads/ecolens-logo-transparent.png" 
                   alt="EcoLens Logo" 
                   className="h-full w-full object-contain" 
                 />
@@ -41,11 +41,11 @@ const Navbar = () => {
           
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#goals" className={`font-medium hover:text-eco-green transition-colors ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>Goals</a>
-            <a href="#stakeholders" className={`font-medium hover:text-eco-green transition-colors ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>Stakeholders</a>
-            <a href="#history" className={`font-medium hover:text-eco-green transition-colors ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>History</a>
-            <a href="#posters" className={`font-medium hover:text-eco-green transition-colors ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>Posters</a>
-            <a href="#support" className={`font-medium hover:text-eco-green transition-colors ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>Support</a>
+            <a href="#goals" className={`nav-link hover:text-eco-green ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>Goals</a>
+            <a href="#stakeholders" className={`nav-link hover:text-eco-green ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>Stakeholders</a>
+            <a href="#history" className={`nav-link hover:text-eco-green ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>History</a>
+            <a href="#app" className={`nav-link hover:text-eco-green ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>App</a>
+            <a href="#support" className={`nav-link hover:text-eco-green ${scrolled ? 'text-gray-700' : 'text-gray-800'}`}>Support</a>
           </nav>
           
           {/* Contact Button */}
@@ -73,7 +73,7 @@ const Navbar = () => {
             <a href="#goals" className="font-medium text-gray-800 hover:text-eco-green transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Goals</a>
             <a href="#stakeholders" className="font-medium text-gray-800 hover:text-eco-green transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Stakeholders</a>
             <a href="#history" className="font-medium text-gray-800 hover:text-eco-green transition-colors py-1" onClick={() => setIsMenuOpen(false)}>History</a>
-            <a href="#posters" className="font-medium text-gray-800 hover:text-eco-green transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Posters</a>
+            <a href="#app" className="font-medium text-gray-800 hover:text-eco-green transition-colors py-1" onClick={() => setIsMenuOpen(false)}>App</a>
             <a href="#support" className="font-medium text-gray-800 hover:text-eco-green transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Support</a>
             <a href="#newsletter" className="bg-eco-green hover:bg-eco-green-dark text-white px-4 py-2 rounded-md transition-colors text-center mt-2" onClick={() => setIsMenuOpen(false)}>
               Stay Updated
