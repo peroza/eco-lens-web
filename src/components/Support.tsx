@@ -40,6 +40,14 @@ const partners: LogoItem[] = [
     src: `${BASE_URL}partners/Logotype_planted_puple_rgb.png`,
     url: "https://planted.ch/",
   },
+  {
+    name: "Racines",
+    src: `${BASE_URL}partners/racines.png`,
+  },
+  {
+    name: "PilzChef",
+    src: `${BASE_URL}partners/pilzchef.png`,
+  },
 ];
 
 const supporters: LogoItem[] = [
@@ -100,7 +108,9 @@ const Support = () => {
                       <img
                         src={partner.src}
                         alt={partner.name}
-                        className="max-h-16 w-full object-contain"
+                        className={`w-full object-contain ${
+                          partner.name === "PilzChef" ? "max-h-20" : "max-h-16"
+                        }`}
                         loading="lazy"
                       />
                     </a>
@@ -108,7 +118,9 @@ const Support = () => {
                     <img
                       src={partner.src}
                       alt={partner.name}
-                      className="max-h-16 w-full object-contain"
+                      className={`w-full object-contain ${
+                        partner.name === "PilzChef" ? "max-h-20" : "max-h-16"
+                      }`}
                       loading="lazy"
                     />
                   )}

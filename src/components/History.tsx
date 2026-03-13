@@ -1,7 +1,15 @@
 
-import React from 'react';
-import { useInView } from '@/hooks/useInView';
-import { History as HistoryIcon, CalendarDays, Award, Building, Leaf } from 'lucide-react';
+import React from "react";
+import { useInView } from "@/hooks/useInView";
+import {
+  History as HistoryIcon,
+  CalendarDays,
+  Award,
+  Building,
+  Leaf,
+} from "lucide-react";
+
+const BASE_URL = import.meta.env.BASE_URL;
 
 const History = () => {
   const { ref: timelineRef, inView: timelineInView } = useInView<HTMLDivElement>();
@@ -46,29 +54,48 @@ const History = () => {
               
               {/* Physical pilot (2022) */}
               <div className="relative flex flex-col md:flex-row items-center md:justify-between group">
-                <div className="hidden md:block md:w-1/2 md:pr-8 md:text-right"></div>
-                
+                <div className="hidden md:block md:w-1/2 md:pr-8 md:text-right">
+                  <img
+                    src={`${BASE_URL}pilots/pilot-2022.jpg`}
+                    alt="EcoLens physical pilot challenge poster in 2022"
+                    className="w-full max-w-md rounded-lg shadow-md object-cover"
+                    loading="lazy"
+                  />
+                </div>
+
                 <div className="absolute left-0 md:left-1/2 transform -translate-y-1/3 md:-translate-x-1/2 w-8 h-8 rounded-full bg-eco-green flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
                   <CalendarDays size={16} className="text-white" />
                 </div>
-                
+
                 <div className="flex md:w-1/2 md:pl-8 pl-8 items-center">
                   <div>
-                    <h3 className="text-xl font-bold text-eco-green-dark mb-2">Physical Pilot (2022)</h3>
+                    <h3 className="text-xl font-bold text-eco-green-dark mb-2">
+                      Physical Pilot (2022)
+                    </h3>
                     <p className="text-gray-600">
-                      In 2022 we tested EcoLens with a physical pilot project: the EcoLens Challenge. Over 2–3 weeks, around 500 participants engaged across four EPFL cafeterias — FoodLab Native, FoodLab Alpine, Piano, and Ornithorynque — validating the concept with the campus community.
+                      In 2022 we tested EcoLens with a physical pilot project:
+                      the EcoLens Challenge. Over 2–3 weeks, around 500
+                      participants engaged across four EPFL cafeterias —
+                      FoodLab Native, FoodLab Alpine, Piano, and Ornithorynque
+                      — validating the concept with the campus community.
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               {/* Digital pilot (2025) */}
               <div className="relative flex flex-col md:flex-row items-center md:justify-between group">
                 <div className="flex md:w-1/2 md:pr-8 pr-8 pl-8 md:pl-0 items-center mb-4 md:mb-0">
                   <div>
-                    <h3 className="text-xl font-bold text-eco-green-dark mb-2">Digital App Pilot (2025)</h3>
+                    <h3 className="text-xl font-bold text-eco-green-dark mb-2">
+                      Digital App Pilot (2025)
+                    </h3>
                     <p className="text-gray-600">
-                      In 2025 we ran a first digital pilot with the EcoLens app, reaching around 150 downloads and collecting real-world usage and impact data. These insights help us refine the experience and will be complemented with more detailed metrics as the project grows.
+                      In 2025 we ran a first digital pilot with the EcoLens app,
+                      reaching around 150 downloads and collecting real-world
+                      usage and impact data. These insights help us refine the
+                      experience and will be complemented with more detailed
+                      metrics as the project grows.
                     </p>
                   </div>
                 </div>
@@ -77,15 +104,27 @@ const History = () => {
                   <CalendarDays size={16} className="text-white" />
                 </div>
 
-                <div className="hidden md:block md:w-1/2 md:pl-8"></div>
+                <div className="hidden md:block md:w-1/2 md:pl-8">
+                  <img
+                    src={`${BASE_URL}pilots/pilot-2025.jpg`}
+                    alt="EcoLens digital pilot team in front of partner food truck in 2025"
+                    className="w-full max-w-md rounded-lg shadow-md object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          
-          <div className="mt-12 text-center">
-            <a href="https://studentchallenge.ch/project/ecolens-raise-awareness-around-food-habits/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-eco-green-dark hover:text-eco-green font-medium">
-              <Leaf className="mr-2" size={18} />
-              EcoLens – Raise awareness around food habits
+
+          <div className="mt-12 flex justify-center">
+            <a
+              href="https://actu.epfl.ch/news/we-want-to-make-food-sustainability-fun/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-eco-green px-6 py-3 text-white font-semibold shadow-md hover:bg-eco-green-dark transition-colors"
+            >
+              <Leaf className="mr-1" size={18} />
+              <span>Read our article on the EPFL website</span>
             </a>
           </div>
         </div>
