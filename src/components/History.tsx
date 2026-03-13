@@ -54,11 +54,11 @@ const History = () => {
               
               {/* Physical pilot (2022) */}
               <div className="relative flex flex-col md:flex-row items-center md:justify-between group">
-                <div className="hidden md:block md:w-1/2 md:pr-8 md:text-right">
+                <div className="w-full md:w-1/2 md:pr-8 md:text-right mb-6 md:mb-0">
                   <img
                     src={`${BASE_URL}pilots/pilot-2022.jpg`}
                     alt="EcoLens physical pilot challenge poster in 2022"
-                    className="w-full max-w-md rounded-lg shadow-md object-cover"
+                    className="w-full max-w-md rounded-lg shadow-md object-cover mx-auto"
                     loading="lazy"
                   />
                 </div>
@@ -85,7 +85,7 @@ const History = () => {
 
               {/* Digital pilot (2025) */}
               <div className="relative flex flex-col md:flex-row items-center md:justify-between group">
-                <div className="flex md:w-1/2 md:pr-8 pr-8 pl-8 md:pl-0 items-center mb-4 md:mb-0">
+                <div className="flex md:w-1/2 md:pr-8 pr-8 pl-8 md:pl-0 items-center mb-4 md:mb-0 order-2 md:order-1">
                   <div>
                     <h3 className="text-xl font-bold text-eco-green-dark mb-2">
                       Digital App Pilot (2025)
@@ -104,11 +104,11 @@ const History = () => {
                   <CalendarDays size={16} className="text-white" />
                 </div>
 
-                <div className="hidden md:block md:w-1/2 md:pl-8">
+                <div className="w-full md:w-1/2 md:pl-8 mb-6 md:mb-0 order-1 md:order-2">
                   <img
                     src={`${BASE_URL}pilots/pilot-2025.jpg`}
                     alt="EcoLens digital pilot team in front of partner food truck in 2025"
-                    className="w-full max-w-md rounded-lg shadow-md object-cover"
+                    className="w-full max-w-md rounded-lg shadow-md object-cover mx-auto"
                     loading="lazy"
                   />
                 </div>
