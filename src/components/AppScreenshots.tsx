@@ -66,8 +66,8 @@ const AppScreenshots = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="left-2 md:left-4" />
+            <CarouselNext className="right-2 md:right-4" />
           </Carousel>
         </div>
 

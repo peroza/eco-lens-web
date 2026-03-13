@@ -43,10 +43,12 @@ const partners: LogoItem[] = [
   {
     name: "Racines",
     src: `${BASE_URL}partners/racines.png`,
+    url: "https://www.plantbased-racines.ch/",
   },
   {
     name: "PilzChef",
     src: `${BASE_URL}partners/pilzchef.png`,
+    url: "https://pilzchef.ch/",
   },
 ];
 
