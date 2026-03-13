@@ -1,6 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+
+const LOGO_SRC = `${import.meta.env.BASE_URL}lovable-uploads/ecolens-logo-transparent.png`;
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,10 +31,10 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="#" className="flex items-center space-x-2">
               <div className="h-10 w-10 relative">
-                <img 
-                  src="/lovable-uploads/ecolens-logo-transparent.png" 
-                  alt="EcoLens Logo" 
-                  className="h-full w-full object-contain" 
+                <img
+                  src={LOGO_SRC}
+                  alt="EcoLens Logo"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <span className={`text-xl font-bold ${scrolled ? 'text-eco-green-dark' : 'text-eco-green-dark'} font-poppins`}>ECOLENS</span>

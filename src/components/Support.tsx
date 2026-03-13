@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React from "react";
 
 type LogoItem = {
   name: string;
@@ -7,63 +7,65 @@ type LogoItem = {
   url?: string;
 };
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const partners: LogoItem[] = [
   {
-    name: 'New Roots',
-    src: '/partners/NEW ROOTS_Logo-basique_RVB_black.png',
-    url: 'https://newroots.ch/en/',
+    name: "New Roots",
+    src: `${BASE_URL}partners/NEW ROOTS_Logo-basique_RVB_black.png`,
+    url: "https://newroots.ch/en/",
   },
   {
-    name: 'Déliss',
-    src: '/partners/logo-deliss.png',
-    url: 'https://www.deliss.org/',
+    name: "Déliss",
+    src: `${BASE_URL}partners/logo-deliss.png`,
+    url: "https://www.deliss.org/",
   },
   {
-    name: 'tibits',
-    src: '/partners/tibits_4c_pos_os.png',
-    url: 'https://tibits.ch/en',
+    name: "tibits",
+    src: `${BASE_URL}partners/tibits_4c_pos_os.png`,
+    url: "https://tibits.ch/en",
   },
   {
-    name: 'Ragi',
-    src: '/partners/Ragi Logo.png',
-    url: 'https://www.ragi.ch/',
+    name: "Ragi",
+    src: `${BASE_URL}partners/Ragi Logo.png`,
+    url: "https://www.ragi.ch/",
   },
   {
-    name: 'Chiche',
-    src: '/partners/Chiche Logo.png',
-    url: 'https://chiche.xyz/',
+    name: "Chiche",
+    src: `${BASE_URL}partners/Chiche Logo.png`,
+    url: "https://chiche.xyz/",
   },
   {
-    name: 'planted',
-    src: '/partners/Logotype_planted_puple_rgb.png',
-    url: 'https://planted.ch/',
+    name: "planted",
+    src: `${BASE_URL}partners/Logotype_planted_puple_rgb.png`,
+    url: "https://planted.ch/",
   },
 ];
 
 const supporters: LogoItem[] = [
   {
-    name: 'EPFL IFNC',
-    src: '/supporters/EPFL IFNC Logo.png',
+    name: "EPFL IFNC",
+    src: `${BASE_URL}supporters/EPFL IFNC Logo.png`,
   },
   {
-    name: 'Durabilité EPFL',
-    src: '/supporters/epfl-durabilite.png',
+    name: "Durabilité EPFL",
+    src: `${BASE_URL}supporters/epfl-durabilite.png`,
   },
   {
-    name: 'Pi2Life',
-    src: '/supporters/pi2life.jpeg',
+    name: "Pi2Life",
+    src: `${BASE_URL}supporters/pi2life.jpeg`,
   },
   {
-    name: 'DLAB',
-    src: '/supporters/dlab.png',
+    name: "DLAB",
+    src: `${BASE_URL}supporters/dlab.png`,
   },
   {
-    name: 'PBU',
-    src: '/supporters/PBU_white.jpg',
+    name: "PBU",
+    src: `${BASE_URL}supporters/PBU_white.jpg`,
   },
   {
-    name: 'Vegetables Logo',
-    src: '/supporters/vegetables-logo-noir-vert-B_20250509_142536_0000.png',
+    name: "Vegetables Logo",
+    src: `${BASE_URL}supporters/vegetables-logo-noir-vert-B_20250509_142536_0000.png`,
   },
 ];
 

@@ -1,6 +1,8 @@
 
-import React from 'react';
-import { Linkedin, Github, Instagram, Twitter } from 'lucide-react';
+import React from "react";
+import { Linkedin, Github, Instagram, Twitter } from "lucide-react";
+
+const LOGO_SRC = `${import.meta.env.BASE_URL}lovable-uploads/ecolens-logo-transparent.png`;
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +16,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 relative">
                 <img
-                  src="/lovable-uploads/ecolens-logo-transparent.png"
+                  src={LOGO_SRC}
                   alt="EcoLens Logo"
                   className="h-full w-full object-contain"
                 />
