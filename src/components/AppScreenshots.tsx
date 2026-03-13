@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -8,14 +8,16 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const screenshots = [
   {
-    src: '/screenshots/home.png',
-    alt: 'EcoLens app home screen',
+    src: `${BASE_URL}screenshots/home.png`,
+    alt: "EcoLens app home screen",
   },
   {
-    src: '/screenshots/ranking.png',
-    alt: 'EcoLens app ranking screen',
+    src: `${BASE_URL}screenshots/ranking.png`,
+    alt: "EcoLens app ranking screen",
   },
 ];
 
@@ -77,7 +79,7 @@ const AppScreenshots = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/download-app/apple_store.svg"
+              src={`${BASE_URL}download-app/apple_store.svg`}
               alt="Download on the App Store"
               className="h-12 md:h-14 w-auto object-contain"
               loading="lazy"
@@ -90,7 +92,7 @@ const AppScreenshots = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/download-app/google_play.png"
+              src={`${BASE_URL}download-app/google_play.png`}
               alt="Get it on Google Play"
               className="h-12 md:h-14 w-auto object-contain"
               loading="lazy"
