@@ -33,14 +33,14 @@ const Hero = () => {
             <p className="text-sm md:text-base font-poppins tracking-[0.35em] md:tracking-[0.3em] text-eco-green mb-2">
               ECOLENS
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-eco-green-dark mb-6 font-poppins animate-growUp leading-snug">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-eco-green-dark mb-6 font-poppins animate-growUp leading-snug">
               Connecting{" "}
-              <span className="bg-white/70 px-3 py-1 rounded-full inline-block text-center md:px-2 md:py-0.5 md:text-left md:whitespace-nowrap">
+              <span className="bg-white/70 px-3 py-1 rounded-full inline-block text-center md:px-2 md:py-0.5 md:text-left lg:whitespace-nowrap">
                 committed consumers
               </span>
               <span className="block mt-2">
                 with{" "}
-                <span className="bg-white/70 px-3 py-1 rounded-full inline-block text-center md:px-2 md:py-0.5 md:text-left md:whitespace-nowrap">
+                <span className="bg-white/70 px-3 py-1 rounded-full inline-block text-center md:px-2 md:py-0.5 md:text-left lg:whitespace-nowrap">
                   committed producers
                 </span>
               </span>
