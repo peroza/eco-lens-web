@@ -16,8 +16,12 @@ const screenshots = [
     alt: "EcoLens app home screen",
   },
   {
-    src: `${BASE_URL}screenshots/ranking.png`,
-    alt: "EcoLens app ranking screen",
+    src: `${BASE_URL}screenshots/ranking-f.png`,
+    alt: "EcoLens app ranking screen (friends & leaderboard)",
+  },
+  {
+    src: `${BASE_URL}screenshots/ranking-p.png`,
+    alt: "EcoLens app ranking screen (personal progress)",
   },
 ];
 
@@ -59,7 +63,7 @@ const AppScreenshots = () => {
                     <img
                       src={screenshot.src}
                       alt={screenshot.alt}
-                      className="w-full max-w-2xl md:max-w-3xl object-contain"
+                      className="w-full max-w-lg md:max-w-xl object-contain"
                       loading="lazy"
                     />
                   </div>
