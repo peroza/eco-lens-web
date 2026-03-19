@@ -74,7 +74,7 @@ const Hero = () => {
             {/* Back-most phone */}
             <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
               <div
-                className={`w-full max-w-xs sm:max-w-sm lg:max-w-md transition-transform duration-300 ease-out ${
+                className={`w-full max-w-[11rem] sm:max-w-xs lg:max-w-sm transition-transform duration-300 ease-out ${
                   isStackExpanded
                     ? "rotate-[-18deg] -translate-x-10 translate-y-4"
                     : "rotate-6 translate-x-[-10px] translate-y-[20px]"
@@ -92,7 +92,7 @@ const Hero = () => {
             {/* Middle phone */}
             <div className="relative w-full flex justify-center">
               <div
-                className={`w-full max-w-xs sm:max-w-sm lg:max-w-md transition-transform duration-300 ease-out ${
+                className={`w-full max-w-[11rem] sm:max-w-xs lg:max-w-sm transition-transform duration-300 ease-out ${
                   isStackExpanded
                     ? "rotate-0 translate-x-0 translate-y-0"
                     : "rotate-[-10deg] translate-x-4 translate-y-6"
@@ -116,7 +116,7 @@ const Hero = () => {
                     : ""
                 }`}
               >
-                <div className="w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                <div className="w-full max-w-[11rem] sm:max-w-xs lg:max-w-sm">
                   <img
                     src={`${import.meta.env.BASE_URL}screenshots/home.png`}
                     alt="EcoLens home screen"
