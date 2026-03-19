@@ -63,7 +63,7 @@ const AppScreenshots = () => {
                     <img
                       src={screenshot.src}
                       alt={screenshot.alt}
-                      className="w-full max-w-lg md:max-w-xl object-contain"
+                      className="max-h-[80vh] w-auto max-w-full object-contain"
                       loading="lazy"
                     />
                   </div>

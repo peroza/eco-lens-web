@@ -30,6 +30,9 @@ const Hero = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center lg:items-center justify-between gap-12 animate-fadeIn">
           {/* Text column */}
           <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+            <p className="text-sm md:text-base font-poppins tracking-[0.35em] md:tracking-[0.3em] text-eco-green mb-2">
+              ECOLENS
+            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-eco-green-dark mb-6 font-poppins animate-growUp leading-snug">
               Connecting{" "}
               <span className="bg-white/70 px-3 py-1 rounded-full inline-block text-center md:px-2 md:py-0.5 md:text-left md:whitespace-nowrap">
