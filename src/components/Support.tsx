@@ -64,6 +64,16 @@ const supporters: LogoItem[] = [
     url: "https://www.epfl.ch/about/sustainability/fr/durabilite/",
   },
   {
+    name: "Unibo",
+    src: `${BASE_URL}supporters/unibo.png`,
+    url: "https://distal.unibo.it/it/index.html",
+  },
+  {
+    name: "Zero Emission Group",
+    src: `${BASE_URL}supporters/zero-emission-group.jpeg`,
+    url: "https://zeroemission.group/",
+  },
+  {
     name: "Pi2Life",
     src: `${BASE_URL}supporters/pi2life.jpeg`,
     url: "https://pi2.life/home",
